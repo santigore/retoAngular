@@ -1,0 +1,23 @@
+<h1><b>Editar Vehículo</b></h1>
+
+<div class="container">
+  <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-subtitle>Nombre: <input type="text" name="name" [(ngModel)]="car.name" class="form-control" ></mat-card-subtitle>
+        <mat-card-subtitle>Modelo: <input type="text" name="modelo" [(ngModel)]="car.modelo" class="form-control" ></mat-card-subtitle>
+        <mat-card-subtitle>Marca:  <input type="text" name="marca" [(ngModel)]="car.marca" class="form-control" ></mat-card-subtitle>
+        <mat-card-subtitle>Precio: <input type="text" name="price" [(ngModel)]="car.price" class="form-control" ></mat-card-subtitle>
+        <img mat-card-md-image src="{{car.photoUrl}}">
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+
+  <div class="conButton">
+    <button mat-raised-button color="primary" type="submit"> Actualizar </button>
+  </div>
+</form>
+</div>
+
+
